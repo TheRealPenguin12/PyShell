@@ -6,8 +6,8 @@ Welcome to PyShell, a shell entirely built in python.
 
 ### Coming Soon
 
-- Module for running as command.
-- IDLE/IDE mode
+[ ] Module for running as command.
+[ ] IDLE/IDE mode
 
 ### About
 
