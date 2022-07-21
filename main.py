@@ -2,9 +2,6 @@ import subprocess
 from colorama import init, Fore, Back, Style
 import os, getpass
 import requests
-response = requests.get('https://yoursite/page')
-if not open(__file__, mode="r") == reasponse.text:
-    print("{Style.BRIGHT}{Fore.RED}Your version of PyShell is outdated, we reccommend you update it. Type 'info' for more information.{Style.RESET_ALL}")
 path = os.path.dirname(os.path.abspath(__file__))
 licensefile = open(f"{path}/LICENSE", mode="r")
 creditsfile = open(f"{path}/CREDITS", mode="r")
@@ -12,6 +9,9 @@ infofile = open(f"{path}/INFO", mode="r")
 init()
 done = False
 print(f"{Fore.WHITE}{Style.BRIGHT}Welcome to PyShell, a shell entirely built in python.\nSee an issue? Report it on Github https://github.com/desvasicek/PyShell\n{Style.DIM}Type 'credits' for credits, 'license' for the license, or 'info' for more information{Style.RESET_ALL}")
+response = requests.get('https://raw.githubusercontent.com/desvasicek/PyShell/master/main.py')
+if not open(__file__, mode="r") == response.text:
+    print(f"\n{Style.BRIGHT}{Fore.RED}Your version of PyShell is outdated, we reccommend you update it. Type 'info' for more information.{Style.RESET_ALL}\n")
 while not done:
     cmd = input(f"{Style.BRIGHT}{Fore.GREEN}{getpass.getuser()}@{os.uname()[1]}{Style.RESET_ALL}:{Style.BRIGHT}{Fore.BLUE}~ ${Style.RESET_ALL} ")
     try:
