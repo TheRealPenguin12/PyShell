@@ -1,6 +1,9 @@
+# Code by @desvasicek
+# © 2022 Des
+# MIT License
 import subprocess
 from colorama import init, Fore, Back, Style
-import os, getpass
+import os, getpass, sys
 import requests
 path = os.path.dirname(os.path.abspath(__file__))
 licensefile = open(f"{path}/LICENSE", mode="r")
