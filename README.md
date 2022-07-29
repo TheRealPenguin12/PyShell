@@ -8,7 +8,6 @@ Welcome to PyShell, a shell entirely built in python.
 
 - [x] First commit
 - [ ] Module for running as command.
-- [ ] IDLE/IDE mode
 
 ### About
 
